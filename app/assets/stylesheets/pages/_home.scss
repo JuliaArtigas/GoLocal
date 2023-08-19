@@ -1,1 +1,6 @@
-// Specific CSS for your home-page
+.banner-home {
+  height: 400px;
+  border: 2px $primary-06 solid;
+  border-radius: $border-radius;
+  margin-bottom: 24px;
+}

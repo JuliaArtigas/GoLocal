@@ -1,80 +1,19 @@
-<div class="grid-card-sq-lg">
-  <div class="card-sq-lg" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-lg-content">
-      São Paulo
-    </div>
+<section id="banner-home">
+  <%= render "banner_home" %>
+</section>
+<section id="city-suggest">
+  <h3>Vai viajar?</h3>
+  <div class="grid-card-sq-lg">
+    <% @cities.each do |city| %>
+      <div class="card-sq-lg">
+        <%= link_to city.name, city_path(city.id), class: "card-sq-lg-content" %>
+      </div>
+    <% end %>
   </div>
-  <div class="card-sq-lg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-lg-content">
-      Belo Horizonte
-    </div>
-  </div>
-  <div class="card-sq-lg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-lg-content">
-      Belo Horizonte
-    </div>
-  </div>
-</div>
+</section>
 
-<div class="grid-card-sq-md">
-  <div class="card-sq-md" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-md-content">
-      São Paulo
-    </div>
+<section id="banner-call">
+  <div class="banner-home">
+    <h1>BANNER</h1>
   </div>
-  <div class="card-sq-md" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-md-content">
-      Belo Horizonte
-    </div>
-  </div>
-  <div class="card-sq-md" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-md-content">
-      Belo Horizonte
-    </div>
-  </div>
-  <div class="card-sq-md" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-md-content">
-      Belo Horizonte
-    </div>
-  </div>
-</div>
-
-<div class="grid-card-sq-sm">
-  <div class="card-sq-sm" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-sm-content">
-      São Paulo
-    </div>
-  </div>
-  <div class="card-sq-sm" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-sm-content">
-      Belo Horizonte
-    </div>
-  </div>
-  <div class="card-sq-sm" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-sm-content">
-      Belo Horizonte
-    </div>
-  </div>
-  <div class="card-sq-md" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-md-content">
-      Belo Horizonte
-    </div>
-  </div>
-  <div class="card-sq-md" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-md-content">
-      Belo Horizonte
-    </div>
-  </div>
-    <div class="card-sq-md" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path("teste-sp.png") %>)">
-    <div class="card-sq-md-content">
-      Belo Horizonte
-    </div>
-  </div>
-</div>
-
-<h1>Vai viajar?</h1>
-<% @cities.each do |city| %>
-  <div card-sq-lg>
-    <h1><%= link_to city.name, city_path(city.id) %></h1>
-  </div>
-<% end %>
+</section>
