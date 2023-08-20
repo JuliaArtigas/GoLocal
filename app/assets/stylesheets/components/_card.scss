@@ -1,4 +1,4 @@
-
+// card large
 .card-sq-lg {
   display: flex;
   justify-content: center;
@@ -47,6 +47,8 @@
 
 }
 
+// card medium
+
 .card-sq-md {
   display: flex;
   justify-content: center;
@@ -94,6 +96,9 @@
 
 }
 
+
+// card small
+
 .card-sq-sm {
   display: flex;
   justify-content: center;
@@ -121,9 +126,10 @@
 }
 
 .grid-card-sq-sm {
+  border: 2px solid red;
   grid-template-columns: repeat(6, 1fr);
   display: grid;
-  margin: 24px 24px 24px 24px;
+  margin: 24px 0;
   gap: 24px 24px;
 }
 
