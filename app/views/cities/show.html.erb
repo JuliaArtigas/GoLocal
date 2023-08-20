@@ -1,7 +1,6 @@
-<div class="container">
-  <%= render 'shared/banner_city' %>
+<div>
   <div class="city-details">
-    <h1 class="city-name"><%= @city.name %> - <span class="state-title"></span></h1>
+    <span class="d-flex align-items-bottom"><h1 class="city-name"><%= @city.name %></h1> <h2>Estado</h2></span class="d-flex">
     <p class="city-description">
       <%= @city.description %>
     </p>
@@ -17,7 +16,7 @@
       </div>
     </div>
 
-    <div class="events-container">
+    <div >
       <% @events.each do |event| %>
         <div class="event">
           <h4><%= link_to event.title, event_path(event) %></h4>

@@ -1,12 +1,7 @@
-<div class="container">
-  <h3>O que gostaria de fazer?</h3>
-  <p> o texto eh geral padrao ou especifico por cidade?
-  O Rio de Janeiro provavelmente seja a cidade do Brasil com mais opções de coisas para se fazer. Há atrações super conhecidas como o Cristo Redentor...</p>
-  <div>
-    <% Location.categories.each do |category| %>
-      <div class="card-sq-sm">
-        <%= link_to category, locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil) %>
-      </div>
-    <% end %>
-  </div>
+<div class="grid-card-sq-sm">
+  <% Location.categories.each do |category| %>
+    <div class="card-sq-sm" style="background-image: url(<%= asset_path('teste-sp.png') %>);" >
+        <%= link_to category, locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil), class: "card-sq-sm-content"%>
+    </div>
+  <% end %>
 </div>
