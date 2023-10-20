@@ -1,13 +1,13 @@
 class FavoritesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_favorite, only: [:show, :edit, :update, :destroy]
+  before_action :set_location, only: [:create]
 
   def index
     @favorites = policy_scope(Favorite).where(user: current_user)
   end
 
   def create
-    @location = Location.find(params[:location_id])
     @favorite = Favorite.new(user: current_user, location: @location)
     authorize @favorite
     @favorite.save!
