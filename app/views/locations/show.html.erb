@@ -4,7 +4,7 @@
       <i class="fa fa-heart favorited-heart"></i>
     <% else %>
       <%= link_to location_favorites_path(@location), data: {turbo_method: :post} do %>
-       <i class="fa fa-heart ml-3"></i><span class="favoritar-text no-style-link link-text"> Favoritar</span>
+       <i class="fa fa-heart ml-3 fa-2x"></i><span class="favoritar-text no-style-link link-text"></span>
       <% end %>
     <% end %>
   </div>
