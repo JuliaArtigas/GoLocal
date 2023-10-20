@@ -11,7 +11,7 @@
         <% @favorites.each do |favorite| %>
           <div class="card-geo sq-md" data-id="<%= favorite.location.id %>" data-lat="<%= favorite.location.latitude %>" data-lng="<%= favorite.location.longitude %>">
             <!-- Botão de exclusão no canto superior direito -->
-            <%= link_to 'X', favorite_path(favorite), method: :delete, data: { turbo_method: :delete, turbo_confirm: "tem certeza que gostaria de deletar?" }, class:"no-style-link", style: "position: absolute; top: 0; right: 6px; z-index: 1; font-size: 15px; transform: scaleX(1.33);" %>
+            <%= link_to 'X', favorite_path(favorite), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de desfavoritar esse local?" }, class:"no-style-link", style: "position: absolute; top: 0; right: 6px; z-index: 1; font-size: 15px; transform: scaleX(1.33);" %>
 
             <%= link_to location_path(favorite.location), class: "map-marker-link location-link no-style-link", data: { id: favorite.location.id } do %>
               <div class="card-content-geo sq-md">
