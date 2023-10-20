@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
  get '/locations/:id/approve', to: 'locations#approve', as: 'approve_location'
  get '/events/:id/approve', to: 'events#approve', as: 'approve_event'
+ delete '/favorites/:id', to: 'favorites#destroy', as: 'delete_favorite'
 
   resources :locations do
     resources :favorites, only: [:create]
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :ratings
-  resources :favorites, only: [:index, :destroy]
+  resources :favorites, only: [:index]
   resources :cities
   resources :neighborhoods
   resources :profiles, only: [:show, :edit, :update]
