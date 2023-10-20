@@ -1,10 +1,12 @@
 <section class="position-relative mb-3">
   <div class="heart-icon-geo position-absolute special-heart-position d-flex align-items-baseline">
     <% if current_user && current_user.favorites.where(location_id: @location.id).exists? %>
-      <i class="fa fa-heart favorited-heart"></i>
+      <%= link_to favorite_path(favorite) do %>
+        <i class="fa fa-heart favorited-heart fa-2xl mr-5"></i>
+      <% end %>
     <% else %>
       <%= link_to location_favorites_path(@location), data: {turbo_method: :post} do %>
-       <i class="fa fa-heart ml-3 fa-2x"></i><span class="favoritar-text no-style-link link-text"></span>
+       <i class="fa fa-heart fa-2xl mr-5"></i><span class="favoritar-text no-style-link link-text"></span>
       <% end %>
     <% end %>
   </div>

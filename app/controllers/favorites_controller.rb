@@ -17,7 +17,7 @@ class FavoritesController < ApplicationController
   def destroy
     authorize @favorite
     @favorite.destroy
-    redirect_to favorites_path, notice: 'Favorito excluido com sucesso!'
+    redirect_to favorites_path, notice: 'Localização removida dos favoritos!'
   end
 
   private
